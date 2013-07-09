@@ -16,6 +16,18 @@
   _refreshControl = [[UIRefreshControl alloc] init];
   [_refreshControl addTarget:self action:@selector(fetchUsers) forControlEvents:UIControlEventValueChanged];
   [_tableView addSubview:_refreshControl];
+  
+  NSEntityDescription * entityDescription = [NSEntityDescription entityForName:@"User" inManagedObjectContext:[ServerController sharedServerController].managedObjectContext];
+  NSFetchRequest * request = [[NSFetchRequest alloc] init];
+  [request setEntity:entityDescription];
+  
+  NSArray * array = [[ServerController sharedServerController].managedObjectContext executeFetchRequest:request error:nil];
+  
+  if(array.count > 0){
+    User * user = [array objectAtIndex:0];
+    _tableDataArray = user.messages.allObjects;
+    [_tableView reloadData];
+  }
 }
 
 #pragma mark - Methods
