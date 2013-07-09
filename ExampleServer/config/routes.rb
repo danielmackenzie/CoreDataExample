@@ -1,6 +1,4 @@
 ExampleServer::Application.routes.draw do
-  resources :plants
-
 
   resources :users
 

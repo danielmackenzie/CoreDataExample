@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		333441AA178C62DF008F9590 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 333441A9178C62DF008F9590 /* NSDataAdditions.m */; };
+		333441AC178C6361008F9590 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 333441AB178C6361008F9590 /* libz.dylib */; };
+		333441B9178C679F008F9590 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 333441B8178C679F008F9590 /* User.m */; };
+		333441BC178C679F008F9590 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 333441BB178C679F008F9590 /* Message.m */; };
+		333441C1178C6B1A008F9590 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 333441C0178C6B1A008F9590 /* MessageCell.m */; };
 		3380E76C175EC7BB00FF92A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3380E76B175EC7BB00FF92A1 /* UIKit.framework */; };
 		3380E76E175EC7BB00FF92A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3380E76D175EC7BB00FF92A1 /* Foundation.framework */; };
 		3380E770175EC7BB00FF92A1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3380E76F175EC7BB00FF92A1 /* CoreGraphics.framework */; };
@@ -19,8 +24,6 @@
 		3380E7AB175EC96A00FF92A1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3380E7A2175EC96A00FF92A1 /* InfoPlist.strings */; };
 		3380E7AC175EC96A00FF92A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3380E7A3175EC96A00FF92A1 /* main.m */; };
 		3380E7AF175EC99800FF92A1 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3380E7AD175EC99800FF92A1 /* CoreData.xcdatamodeld */; };
-		3380E7B2175ED66800FF92A1 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3380E7B1175ED66800FF92A1 /* User.m */; };
-		3380E7B5175ED66900FF92A1 /* Plant.m in Sources */ = {isa = PBXBuildFile; fileRef = 3380E7B4175ED66800FF92A1 /* Plant.m */; };
 		3380E7BB175ED6CB00FF92A1 /* CoreDataStackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3380E7B8175ED6CB00FF92A1 /* CoreDataStackController.m */; };
 		3380E7BC175ED6CB00FF92A1 /* ServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3380E7BA175ED6CB00FF92A1 /* ServerController.m */; };
 		3380E7D0175ED80500FF92A1 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3380E7C7175ED7B300FF92A1 /* libRestKit.a */; };
@@ -70,6 +73,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		333441A8178C62DF008F9590 /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
+		333441A9178C62DF008F9590 /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataAdditions.m; sourceTree = "<group>"; };
+		333441AB178C6361008F9590 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		333441B7178C679F008F9590 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		333441B8178C679F008F9590 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		333441BA178C679F008F9590 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		333441BB178C679F008F9590 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		333441BF178C6B1A008F9590 /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
+		333441C0178C6B1A008F9590 /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
 		3380E768175EC7BB00FF92A1 /* CoreDataExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3380E76B175EC7BB00FF92A1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3380E76D175EC7BB00FF92A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -87,10 +99,6 @@
 		3380E7A2175EC96A00FF92A1 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		3380E7A3175EC96A00FF92A1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3380E7AE175EC99800FF92A1 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
-		3380E7B0175ED66800FF92A1 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		3380E7B1175ED66800FF92A1 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		3380E7B3175ED66800FF92A1 /* Plant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plant.h; sourceTree = "<group>"; };
-		3380E7B4175ED66800FF92A1 /* Plant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plant.m; sourceTree = "<group>"; };
 		3380E7B7175ED6CB00FF92A1 /* CoreDataStackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStackController.h; sourceTree = "<group>"; };
 		3380E7B8175ED6CB00FF92A1 /* CoreDataStackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStackController.m; sourceTree = "<group>"; };
 		3380E7B9175ED6CB00FF92A1 /* ServerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerController.h; sourceTree = "<group>"; };
@@ -109,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				333441AC178C6361008F9590 /* libz.dylib in Frameworks */,
 				3380E7D6175ED83A00FF92A1 /* CFNetwork.framework in Frameworks */,
 				3380E7D7175ED83A00FF92A1 /* CoreData.framework in Frameworks */,
 				3380E7D8175ED83A00FF92A1 /* MobileCoreServices.framework in Frameworks */,
@@ -124,6 +133,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		333441BE178C6AF3008F9590 /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				333441BF178C6B1A008F9590 /* MessageCell.h */,
+				333441C0178C6B1A008F9590 /* MessageCell.m */,
+			);
+			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
 		3380E75F175EC7BB00FF92A1 = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +167,7 @@
 			children = (
 				3380E7D1175ED83900FF92A1 /* CFNetwork.framework */,
 				3380E7D2175ED83A00FF92A1 /* CoreData.framework */,
+				333441AB178C6361008F9590 /* libz.dylib */,
 				3380E7D3175ED83A00FF92A1 /* MobileCoreServices.framework */,
 				3380E7D4175ED83A00FF92A1 /* Security.framework */,
 				3380E7D5175ED83A00FF92A1 /* SystemConfiguration.framework */,
@@ -165,6 +184,7 @@
 				3380E7B6175ED6CB00FF92A1 /* Controllers */,
 				3380E78F175EC96A00FF92A1 /* Global */,
 				3380E792175EC96A00FF92A1 /* Models */,
+				333441BE178C6AF3008F9590 /* UITableViewCell */,
 				3380E793175EC96A00FF92A1 /* UIViewControllers */,
 			);
 			name = Classes;
@@ -176,6 +196,8 @@
 			children = (
 				3380E790175EC96A00FF92A1 /* AppDelegate.h */,
 				3380E791175EC96A00FF92A1 /* AppDelegate.m */,
+				333441A8178C62DF008F9590 /* NSDataAdditions.h */,
+				333441A9178C62DF008F9590 /* NSDataAdditions.m */,
 				3380E7BD175ED6D700FF92A1 /* SynthesizeSingleton.h */,
 			);
 			path = Global;
@@ -184,10 +206,10 @@
 		3380E792175EC96A00FF92A1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3380E7B3175ED66800FF92A1 /* Plant.h */,
-				3380E7B4175ED66800FF92A1 /* Plant.m */,
-				3380E7B0175ED66800FF92A1 /* User.h */,
-				3380E7B1175ED66800FF92A1 /* User.m */,
+				333441BA178C679F008F9590 /* Message.h */,
+				333441BB178C679F008F9590 /* Message.m */,
+				333441B7178C679F008F9590 /* User.h */,
+				333441B8178C679F008F9590 /* User.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -388,10 +410,12 @@
 				3380E7A5175EC96A00FF92A1 /* ViewController.m in Sources */,
 				3380E7AC175EC96A00FF92A1 /* main.m in Sources */,
 				3380E7AF175EC99800FF92A1 /* CoreData.xcdatamodeld in Sources */,
-				3380E7B2175ED66800FF92A1 /* User.m in Sources */,
-				3380E7B5175ED66900FF92A1 /* Plant.m in Sources */,
 				3380E7BB175ED6CB00FF92A1 /* CoreDataStackController.m in Sources */,
 				3380E7BC175ED6CB00FF92A1 /* ServerController.m in Sources */,
+				333441AA178C62DF008F9590 /* NSDataAdditions.m in Sources */,
+				333441B9178C679F008F9590 /* User.m in Sources */,
+				333441BC178C679F008F9590 /* Message.m in Sources */,
+				333441C1178C6B1A008F9590 /* MessageCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +537,7 @@
 				3380E78D175EC7BB00FF92A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

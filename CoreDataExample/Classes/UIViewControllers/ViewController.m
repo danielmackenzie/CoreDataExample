@@ -2,7 +2,9 @@
 
 #import "ViewController.h"
 #import "User.h"
-#import "Plant.h"
+#import "Message.h"
+#import "MessageCell.h"
+#import "NSDataAdditions.h"
 
 @implementation ViewController
 
@@ -14,13 +16,16 @@
   _refreshControl = [[UIRefreshControl alloc] init];
   [_refreshControl addTarget:self action:@selector(fetchUsers) forControlEvents:UIControlEventValueChanged];
   [_tableView addSubview:_refreshControl];
-  [self fetchUsers];
 }
 
 #pragma mark - Methods
 
 - (void)fetchUsers; {
   [[ServerController sharedServerController] fetchUsersWithDelegate:self];
+}
+
+- (IBAction)getDataButtonPressed:(UIButton *)aButton; {
+  [self fetchUsers];
 }
 
 #pragma mark - UITableViewDataSource Methods
@@ -35,20 +40,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath; {
   static NSString * cellIdentifier = @"Cell";
-  UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+  MessageCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+  Message * message = [_tableDataArray objectAtIndex:indexPath.row];
   
   if(!cell){
-    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+    cell = [[MessageCell alloc] init];
   }
-  User * user = [_tableDataArray objectAtIndex:indexPath.row];
-  
-  cell.textLabel.text = user.user_name;
-  
-  if(user.plants.count > 0){
-    Plant * plant = [user.plants.allObjects objectAtIndex:0];
-    cell.detailTextLabel.text = plant.common_name;
-  }
-  
+  cell.message = message;
   return cell;
 }
 
@@ -61,13 +59,14 @@
 #pragma mark - ServerController Methods
 
 - (void)serverController:(ServerController *)aServerController didFetchUsers:(NSArray *)aUsersArray; {
-  _tableDataArray = aUsersArray;
+  User * user = [aUsersArray objectAtIndex:0];
+  _tableDataArray = user.messages.allObjects;
   [_tableView reloadData];
   [_refreshControl endRefreshing];
   
   if(aUsersArray.count > 0){
     User * user = [aUsersArray objectAtIndex:0];
-    NSLog(@"User: %@ The Plants: %@", user, user.plants.allObjects);
+    NSLog(@"User: %@ The Messages: %@", user, user.messages.allObjects);
   }
 }
 

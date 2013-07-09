@@ -1,7 +1,15 @@
+//
 //  User.h
+//  CoreDataExample
+//
+//  Created by Daniel MacKenzie on 2013-07-09.
+//  Copyright (c) 2013 Daniel MacKenzie. All rights reserved.
+//
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+
+@class Message;
 
 @interface User : NSManagedObject
 
@@ -17,17 +25,16 @@
 @property (nonatomic, retain) NSString * postal;
 @property (nonatomic, retain) NSString * profile_picture;
 @property (nonatomic, retain) NSString * province;
-@property (nonatomic, retain) NSString * type_of_garden;
 @property (nonatomic, retain) NSDate * updated_at;
 @property (nonatomic, retain) NSString * user_name;
-@property (nonatomic, retain) NSSet *plants;
+@property (nonatomic, retain) NSSet *messages;
 @end
 
 @interface User (CoreDataGeneratedAccessors)
 
-- (void)addPlantsObject:(NSManagedObject *)value;
-- (void)removePlantsObject:(NSManagedObject *)value;
-- (void)addPlants:(NSSet *)values;
-- (void)removePlants:(NSSet *)values;
+- (void)addMessagesObject:(Message *)value;
+- (void)removeMessagesObject:(Message *)value;
+- (void)addMessages:(NSSet *)values;
+- (void)removeMessages:(NSSet *)values;
 
 @end

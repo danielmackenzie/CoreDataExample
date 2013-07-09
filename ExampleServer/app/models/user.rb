@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
-  has_many :plants
-  attr_accessible :bio, :birth_date, :city, :email, :first_name, :last_name, :password, :postal, :profile_picture, :province, :type_of_garden, :user_name
+  has_many :messages
+  attr_accessible :bio, :birth_date, :city, :email, :first_name, :last_name, :password, :postal, :profile_picture, :province, :user_name
 
   def as_json(options={})
     { :id => self.id,
@@ -14,9 +14,8 @@ class User < ActiveRecord::Base
       :postal => self.postal,
       :profile_picture => self.profile_picture,
       :province => self.province,
-      :type_of_garden => self.type_of_garden,
       :user_name => self.user_name,
-      :plants => self.plants
+      :messages => self.messages
     }
   end
 end
